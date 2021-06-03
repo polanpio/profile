@@ -366,21 +366,21 @@ section .title {
 
 .lewagon-animation .tokyo-background {
   height: 270px;
-  width: 100%;
+  width: 900%;
   background-image: url("images/tokyo-bg.png");
   display: block;
   position: absolute;
   bottom: 0;
   left: 0;
-  /* background-repeat: repeat-x; */
-  /* animation: moveRight 10s linear infinite; */
+  background-repeat: repeat-x;
+  animation: moveRight 10s linear infinite;
 }
 
 .lewagon-animation .car {
   position: absolute;
   bottom: -12%;
   left: 35%;
-  animation: drive 7s linear infinite;
+  /* animation: drive 7s linear infinite; */
 }
 
 .lewagon-animation .car img {
@@ -389,8 +389,11 @@ section .title {
 }
 
 @keyframes moveRight {
-  100% {
-    transform: translateX(-1300px);
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-2760px, 0, 0);
   }
 }
 
@@ -406,14 +409,14 @@ section .title {
   }
 }
 
-@keyframes drive {
+/* @keyframes drive {
   100% {
     transform: translateX(1500px);
   }
   0% {
     transform: translateX(-800px);
   }
-}
+} */
 
 /* footer section styles  */
 footer {
@@ -534,9 +537,7 @@ footer span a:hover {
     font-size: 20px;
   }
 
-  @keyframes moveRight {
-    100% {
-      transform: translateX(-1500px);
-    }
+  .about .about-content .right .text {
+    font-size: 25px;
   }
 }
